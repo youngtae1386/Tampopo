@@ -1,0 +1,15 @@
+<h1>Our Menu</h1>
+<div class="current-items">
+  <h2>Items that are on our menu!</h2>
+  <ul>
+    {{#each items}}
+      {{#unless this.soldout}}
+        <li>
+          {{this.name}}
+          <p>{{this.description}}</p>
+          <p><b>${{this.price}}</b></p>
+        </li>
+      {{/unless}}
+    {{/each}}
+  </ul>
+</div>
